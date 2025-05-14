@@ -1,0 +1,127 @@
+/* Styling Sidebar */
+#sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: #24558A;
+    color: white;
+    padding-top: 20px;
+}
+
+/* Styling Sidebar Header */
+.sidebar-header {
+    padding: 15px;
+    text-align: left;
+}
+
+/* Styling Tabel dalam Sidebar */
+.sidebar-header table {
+    width: 100%;
+}
+
+/* Styling untuk foto profil */
+.user-img {
+    width: 50px; /* Ukuran gambar */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Jarak ke teks */
+}
+
+/* Styling untuk teks */
+.sidebar-header h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.sidebar-header p {
+    font-size: 0.9em;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Styling untuk menu */
+#sidebar ul.components {
+    padding-left: 0;
+}
+
+#sidebar ul.components li {
+    padding: 10px;
+    list-style: none;
+}
+
+#sidebar ul.components li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+#sidebar ul.components li a:hover {
+    background: #183959;
+}
+
+/* Styling untuk Konten */
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Posisikan gambar di tengah */
+    align-items: center;
+}
+
+.images img {
+    height: 150px; /* Sesuaikan ukuran gambar */
+    max-width: 100%;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+}
+
+p.text-muted {
+    font-size: 14px; /* Ukuran font lebih kecil */
+}
+
+button.btn-primary {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    #sidebar.active ~ #content {
+        margin-left: 250px;
+    }
+}
