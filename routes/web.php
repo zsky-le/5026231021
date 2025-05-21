@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
-
+use App\Http\Controllers\pegawaicontroller;
+use App\Http\Controllers\blogcontroller;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,3 +34,31 @@ Route::get('template1', function () {
 Route::get('linktree2', function () {
 	return view('linktree2');
 });
+
+Route::get('test', function () {
+	return view('test');
+});
+
+Route::get('js1', function () {
+	return view('js1');
+});
+
+Route::get('js2', function () {
+	return view('js2');
+});
+
+Route::get('latihanKodeSoal1', function () {
+	return view('latihanKodeSoal1');
+});
+
+
+Route::get('dosen', [Link::class, 'index']);
+Route::get('/pegawai/{nama}', [pegawaicontroller::class, 'index']);
+
+Route::get('/formulir/', [pegawaicontroller::class, 'formulir']);
+Route::post('/formulir/proses', [pegawaicontroller::class, 'proses']);
+
+//route blog
+Route::get('/blog', [blogcontroller::class, 'home']);
+Route::get('/blog/tentang', [blogcontroller::class, 'tentang']);
+Route::get('/blog/kontak', [blogcontroller::class, 'kontak']);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Laravel - www.malasngoding.com</title>
+	<title> Tutorial Laravel - www.malasngoding.com</title>
 </head>
 <body>
 

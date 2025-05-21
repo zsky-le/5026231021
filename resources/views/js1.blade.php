@@ -16,7 +16,7 @@
         function tambah()
         {
             var bilangan1=document.getElementById("bil1").value;
-            var bilangan2=document.getElementById("bil2").value; /*boleh beda*/ 
+            var bilangan2=document.getElementById("bil2").value; /*boleh beda*/
             var hasil = Number.parseInt(bilangan1) + Number.parseInt(bilangan2);
             document.getElementById("hasil").innerHTML = hasil;
             console.log("sudah selesai");

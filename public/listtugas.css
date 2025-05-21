@@ -1,0 +1,50 @@
+body {
+  font-family: "Playwrite DK Loopet", cursive;
+  background-color: #fef3c7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+h1,
+button {
+  font-family: 'Outfit';
+}
+
+h1 {
+  font-family: "Playwrite DK Loopet", cursive;
+  color: #DA756A;
+  margin-bottom: 30px;
+}
+
+.button-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.button-list button {
+  background-color: #B0D16E;
+  color: #DA756A;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px 0;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 600px;
+  transition: background-color 0.3s ease;
+}
+
+.button-list button:hover {
+  background-color: #afdd6c;
+}
