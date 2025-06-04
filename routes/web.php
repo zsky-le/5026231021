@@ -62,3 +62,6 @@ Route::post('/formulir/proses', [pegawaicontroller::class, 'proses']);
 Route::get('/blog', [blogcontroller::class, 'home']);
 Route::get('/blog/tentang', [blogcontroller::class, 'tentang']);
 Route::get('/blog/kontak', [blogcontroller::class, 'kontak']);
+
+//Crud Pegawai
+Route::get('pegawai', [pegawaicontroller::class, 'index']);
