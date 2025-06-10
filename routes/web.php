@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\pegawaicontroller;
 use App\Http\Controllers\blogcontroller;
+use App\Http\Controllers\PensilController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -72,3 +73,11 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+//Crud pensil
+Route::get('/pensil', [PensilController::class, 'index']);
+Route::get('/pensil/tambah', [PensilController::class, 'tambah']);
+Route::post('/pensil/store', [PensilController::class, 'store']);
+Route::get('/pensil/edit/{id}', [PensilController::class, 'edit']);
+Route::post('/pensil/update', [PensilController::class, 'update']);
+Route::get('/pensil/hapus/{id}', [PensilController::class, 'hapus']);
