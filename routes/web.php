@@ -5,6 +5,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\pegawaicontroller;
 use App\Http\Controllers\blogcontroller;
 use App\Http\Controllers\PensilController;
+use App\Http\Controllers\KeranjangController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -81,3 +82,9 @@ Route::post('/pensil/store', [PensilController::class, 'store']);
 Route::get('/pensil/edit/{id}', [PensilController::class, 'edit']);
 Route::post('/pensil/update', [PensilController::class, 'update']);
 Route::get('/pensil/hapus/{id}', [PensilController::class, 'hapus']);
+
+//crud keranjang belanja
+Route::get('/keranjang', [KeranjangController::class, 'index1']);
+Route::get('/keranjang/tambah', [KeranjangController::class, 'tambah1']);
+Route::post('/keranjang/store', [KeranjangController::class, 'store1']);
+Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'hapus1']);
