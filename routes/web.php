@@ -6,6 +6,7 @@ use App\Http\Controllers\pegawaicontroller;
 use App\Http\Controllers\blogcontroller;
 use App\Http\Controllers\PensilController;
 use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\KaryawanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,3 +89,9 @@ Route::get('/keranjang', [KeranjangController::class, 'index1']);
 Route::get('/keranjang/tambah', [KeranjangController::class, 'tambah1']);
 Route::post('/keranjang/store', [KeranjangController::class, 'store1']);
 Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'hapus1']);
+
+//route latihan 3 karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
