@@ -36,7 +36,7 @@
                 <a class="nav-link" href="/pensil">Tugas CRUD</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">EAS</a>
+                <a class="nav-link" href="/eas">EAS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/keranjang">Latihan 1</a>
@@ -46,6 +46,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/karwayan">Latihan 3</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/counter">Latihan 3</a>
             </li>
         </ul>
     </nav>

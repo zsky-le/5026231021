@@ -7,6 +7,10 @@ use App\Http\Controllers\blogcontroller;
 use App\Http\Controllers\PensilController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\CounterController;
+use App\Http\Controllers\ChatController;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\EASController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -95,3 +99,33 @@ Route::get('/karyawan', [KaryawanController::class, 'index']);
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+
+//route latihansoal ff counter
+Route::get('/counter', [CounterController ::class, 'index']);
+
+//route latihan soal aa
+Route::get('/chat', [ChatController :: class, 'index']);
+
+//route mahasiswa
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa/{nrp}/view', [MahasiswaController::class, 'view']);
+Route::get('/mahasiswa/{nrp}/edit', [MahasiswaController::class, 'edit']);
+Route::post('/mahasiswa/{nrp}/update', [MahasiswaController::class, 'update']);
+
+// use App\Http\Controllers\KategoriController;
+
+// Route::get('/kategori', [KategoriController::class, 'index']);
+// Route::post('/kategori/kirim', [KategoriController::class, 'kirim']);
+
+// use App\Http\Controllers\KaryawanController;
+
+// Route::get('/karyawan', [KaryawanController::class, 'index']);
+// Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+// Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+// Route::get('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'hapus']);
+
+//route mykaryawan
+Route::get('/eas', [EASController::class, 'index']);
+Route::get('/eas/{kodepegawai}/view', [EASController::class, 'view']);
+Route::get('/eas/{kodepegawai}/edit', [EASController::class, 'edit']);
+Route::post('/eas/{kodepegawai}/update', [EASController::class, 'update']);
